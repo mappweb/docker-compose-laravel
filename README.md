@@ -6,7 +6,7 @@ Available for versions `7.X` and `8.X` of the Laravel Framework.
 
 ## Deploy containers
 ```shell
-- docker-compose up -d --build
+docker-compose up -d --build
 ```
 
 ## Directory structure
