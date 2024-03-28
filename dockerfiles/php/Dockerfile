@@ -1,4 +1,4 @@
-FROM php:7.4-fpm
+FROM php:8.2-fpm
 
 #move
 RUN mv "$PHP_INI_DIR/php.ini-production" "$PHP_INI_DIR/php.ini"
@@ -27,6 +27,10 @@ RUN apt-get install -y \
     libonig-dev \
     libxml2-dev \
     g++
+
+# install xdebug
+RUN pecl install xdebug
+RUN docker-php-ext-enable xdebug
 
 RUN apt-get install -y libmagickwand-dev --no-install-recommends && pecl install imagick && docker-php-ext-enable imagick
 
