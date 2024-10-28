@@ -46,4 +46,5 @@ RUN php composer-setup.php --install-dir=/usr/local/bin --filename=composer
 RUN curl -sL https://deb.nodesource.com/setup_18.x -o node_setup.sh
 RUN bash node_setup.sh
 RUN apt-get install -y nodejs
-RUN npm install npm -g n
+#RUN npm install npm -g n
+RUN apt-get install build-essential
